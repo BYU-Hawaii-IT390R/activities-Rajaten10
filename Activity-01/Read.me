@@ -1,0 +1,39 @@
+# Recursive Directory Scanner
+
+## 🧩 Enhancement Chosen
+
+I choose this one to check all the files which is larger then 10kb
+1. --min-size filter
+
+python scan.py test_root --min-size 10
+✅ `--min-size`: This enhancement allows users to filter `.txt` files by size. Only files larger than the specified size in kilobytes will be shown in the output.
+
+---
+
+
+
+### 1. This is the data I was able to create on terminal.
+
+Scanning: C:\Users\acer\raja\activities-Rajaten10\Activity-01\test_root
+Found 3 text files larger than 10.0 KB:
+
+File                                      Size (KB)
+----------------------------------------------------
+docs\file3.txt                                 26.7
+logs\file2.txt                                 13.8
+logs\file3.txt                                 19.1
+----------------------------------------------------
+Total size: 59.5 KB
+
+
+This creates the folder structure and sample `.txt` files.
+
+```bash
+python setup_files.py
+
+### Also, all my file looks like this:  
+Activity-01/
+├── scan.py
+├── setup_files.py
+├── README.md
+└── test_root/ (generated after setup)
