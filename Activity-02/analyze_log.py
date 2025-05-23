@@ -108,9 +108,9 @@ def connections(path: str):
     """
     # TODO: replace the placeholder implementation below
 
-    def analyze_successful_creds(path: str):
-     creds = defaultdict(set)
-     with open(path, encoding="utf-8") as fp:
+def analyze_successful_creds(path: str):
+    creds = defaultdict(set)
+    with open(path, encoding="utf-8") as fp:
         for line in fp:
             match = SUCCESS_LOGIN_PATTERN.search(line)
             if match:
@@ -125,6 +125,7 @@ def connections(path: str):
     print("-" * 40)
     for (user, pw), ips in sorted_creds:
         print(f"{user:<15} {pw:<15} {len(ips):>8}")
+
 
 
 
@@ -168,7 +169,5 @@ def main():
         analyze_successful_creds(args.logfile)
     elif args.task == "identify-bots":
         identify_bots(args.logfile, args.min_ips)
-
-
 if __name__ == "__main__":
     main()
